@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <form (ngSubmit)="formUsuario.form.valid && crearUsuario()" #formUsuario="ngForm">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="ObjetoUsuario.Nombre" name="nombre"
+            #nombre="ngModel" required aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="nombreUsuario">Nombre de usuario</label>
+          <input type="text" class="form-control" id="nombreUsuario" [(ngModel)]="ObjetoUsuario.NombreUsuario"
+            name="nombreUsuario" #nombreUsuario="ngModel" aria-describedby="emailHelp">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="ObjetoUsuario.Contrasena"
+            name="contrasena" #contrasena="ngModel" required>
+        </div>
+        <div class="form-group">
+          <label for="roles">Rol</label>
+          <select class="form-control" name="rol" [(ngModel)]="ObjetoUsuario.IdPerfil" #idperfil="ngModel" required
+            id="rol">
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <button type="submit" class="btn btn-primary w-100" (click)="crearUsuario()"
+              [disabled]="!formUsuario.valid">Guardar</button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button type="reset" class="btn btn-danger w-100">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

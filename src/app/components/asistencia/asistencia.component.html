@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12">
+      <form>
+        <div class="form-group">
+          <label for="evento">Seleccione el evento</label>
+          <select class="form-control" id="evento" [(ngModel)]="ObjEvento"
+          name="evento" #evento="ngModel" required required>
+            <option>1</option>
+            <option>2</option>
+          </select>
+        </div>
+      </form>
+      <h4>Buscar por cédula o numero de miembro</h4>
+      <input type="text" class="w-100" placeholder="Buscar asistente">
+      <h3>Listado de asistentes a este evento</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
